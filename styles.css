@@ -1,0 +1,59 @@
+body {
+    background-color: #333; /* Main background color (black/gray) */
+    color: #fff; /* Text color (white) */
+}
+
+.paint-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paint-drip {
+    width: 10px;
+    height: 100px;
+    background-color: #00ffff; /* Aqua highlight color */
+    border-radius: 50%;
+    animation: drip 3s ease-in-out infinite;
+}
+
+@keyframes drip {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.main-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.about-me {
+    background-color: #444; /* Dark gray background color */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

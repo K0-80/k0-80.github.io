@@ -1,10 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <title>My HTML Page</title>
-   </head>
-   <body>
-      <h1>My First Heading</h1>
-      <p>My first paragraph.</p>
-   </body>
+<html>
+<head>
+	<title>K0 - Boba Enthusiast</title>
+	<style>
+		/* Set background color to black */
+		body {
+			background-color: #000;
+		}
+		
+		/* Set text color to red */
+		.text {
+			color: #FF0000;
+		}
+		
+		/* Set highlight color to gold */
+		.highlight {
+			color: #FFD700;
+		}
+		
+		/* Style for the greeting text */
+		.greeting {
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		
+		/* Style for the video embed */
+		.video-container {
+			width: 100%;
+			height: 500px;
+			margin: 20px auto;
+		}
+		
+		/* Style for the profile picture and subtitles */
+		.profile-picture {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			margin: 20px auto;
+		}
+		
+		.subtitles {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+		
+		/* Style for the social media buttons */
+		.social-media-buttons {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+		.social-media-buttons li {
+			margin-bottom: 10px;
+		}
+		
+		.social-media-buttons a {
+			color: #FFD700;
+			text-decoration: none;
+		}
+		
+		.social-media-buttons a:hover {
+			color: #FF0000;
+		}
+	</style>
+</head>
+<body>
+	<!-- Greeting text -->
+	<h1 class="greeting text">K0 - Boba Enthusiast</h1>
+	<p class="text">A 3D modeler/ content creator who is passionate about communities and the people.</p>
+	
+	<!-- Video embed -->
+	<div class="video-container">
+		<iframe width="100%" height="500" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+	</div>
+	
+	<!-- Profile picture and subtitles -->
+	<div class="profile-picture-container">
+		<img class="profile-picture" src="profile_picture.jpg" alt="Profile Picture">
+		<div class="subtitles">
+			<p><span class="highlight">Heyo</span></p>
+			<p>am k0...</p>
+		</div>
+	</div>
+	
+	<!-- Social media buttons -->
+	<ul class="social-media-buttons">
+		<li><a href="https://www.instagram.com/k0_boba_enthusiast">Instagram</a></li>
+		<li><a href="https://www.twitter.com/k0_boba_enthusiast">Twitter</a></li>
+		<li><a href="https://www.youtube.com/k0_boba_enthusiast">YouTube</a></li>
+		<!-- Add more social media platforms here -->
+	</ul>
+</body>
 </html>
