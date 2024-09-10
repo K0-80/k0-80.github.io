@@ -61,3 +61,11 @@ window.addEventListener('resize', () => {
     }
     drawDots();
 })
+window.addEventListener('scroll', () => {
+    let scrollPosition = window.scrollY;
+    let speed = 0.5;
+  
+    banner.style.transform = `translateY(${scrollPosition * speed}px)`;
+    model.style.transform = `translateY(${scrollPosition * speed * 1.5}px)`;
+    bodyBefore.style.transform = `translateY(${scrollPosition * speed * 2}px)`;
+  });
