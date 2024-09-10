@@ -1,7 +1,9 @@
-let banner = document.querySelector('.banner');
+let body = document.querySelector('body');
 let canvas = document.getElementById('dotsCanvas');
-canvas.width = canvas.offsetWidth;
-canvas.height = canvas.offsetHeight;
+
+canvas.width = document.documentElement.scrollWidth;
+canvas.height = document.documentElement.scrollHeight;
+
 const ctx = canvas.getContext('2d');
 const dots = [];
 const arrayColors = ['#999999', '#777777', '#555555', '#333333', '#111111'];
@@ -22,16 +24,17 @@ const drawDots = () => {
     })
 }
 drawDots();
-banner.addEventListener('mousemove', (event) => {
+body.addEventListener('mousemove', (event) => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawDots();
     let mouse = {
-        x:  event.pageX - banner.getBoundingClientRect().left,
-        y:  event.pageY - banner.getBoundingClientRect().top
+        x: event.clientX + window.scrollX - canvas.getBoundingClientRect().left,
+        y: event.clientY + window.scrollY - canvas.getBoundingClientRect().top,
     }
+
     dots.forEach(dot => {
         let distance = Math.sqrt((mouse.x - dot.x) ** 2 + (mouse.y - dot.y) ** 2);
-        if(distance < 300){
+        if (distance < 300) {
             ctx.strokeStyle = dot.color;
             ctx.lineWidth = 1;
             ctx.beginPath();
@@ -41,14 +44,15 @@ banner.addEventListener('mousemove', (event) => {
         }
     })
 })
-banner.addEventListener('mouseout', () => {
+
+body.addEventListener('mouseout', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawDots();
 })
 window.addEventListener('resize', () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    canvas.width = banner.offsetWidth;
-    canvas.height = banner.offsetHeight;
+    canvas.width = body.offsetWidth;
+    canvas.height = body.offsetHeight;
 
     dots = [];
     for (let index = 0; index < 50; index++) {
@@ -61,11 +65,3 @@ window.addEventListener('resize', () => {
     }
     drawDots();
 })
-window.addEventListener('scroll', () => {
-    let scrollPosition = window.scrollY;
-    let speed = 0.5;
-  
-    banner.style.transform = `translateY(${scrollPosition * speed}px)`;
-    model.style.transform = `translateY(${scrollPosition * speed * 1.5}px)`;
-    bodyBefore.style.transform = `translateY(${scrollPosition * speed * 2}px)`;
-  });

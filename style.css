@@ -59,7 +59,7 @@ header nav ul{
     inset: 0 0 0 0;
     content: attr(data-content);
     z-index: 2;
-    -webkit-text-stroke: 4px #0f0f0f;
+    -webkit-text-stroke: 4px #292424d2;
     color: transparent;
 }
 .banner .content .author{
@@ -136,13 +136,32 @@ header nav ul{
 .slider .item:hover{
     filter: grayscale(0);
 }
-.slider[reverse="true"] .item{
-    animation: reversePlay 10s linear infinite;
-}
-@keyframes reversePlay{
-    from{
-        left: calc(var(--width) * -1);
-    }to{
-        left: 100%;
-    }
-}
+
+
+.top-row {
+    overflow: hidden;
+    background-color: #0f0f0f;
+    padding: 20px 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center; 
+  }
+.top-row a {
+    display: inline-block;
+    font-family: minecraft;
+    color: #c3a732;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+  }
+.top-row a:hover {
+    background-color: #313131;
+    color: #8a1000;
+  }
+.top-row a.active {
+    background-color: dodgerblue;
+    color: rgb(0, 0, 0);
