@@ -68,9 +68,16 @@ window.addEventListener('resize', () => {
 
 const bobaTeaHeader = document.getElementById("boba-tea-header");
 
-bobaTeaHeader.addEventListener("click", () => {
-    window.location.href = "eabout.html";
-});
+let links = [
+    "https://www.youtube.com/watch?v=4P6_4O2Ncxg",
+    "https://www.youtube.com/watch?v=9ni3Ip2ynjc&t=2s",
+    "https://www.youtube.com/watch?v=KpykL32XR00&t=52s"
+  ];
+  
+  bobaTeaHeader.addEventListener("click", () => {
+    let rdm = Math.floor(Math.random() * links.length);
+    window.location.href = links[rdm];
+  });
 
 bobaTeaHeader.addEventListener("mousedown", () => {
     bobaTeaHeader.style.transform = "scale(0.9)";
