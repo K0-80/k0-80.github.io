@@ -82,6 +82,7 @@ header nav ul{
     background-repeat: no-repeat;
     background-position: top center;
     z-index: 1;
+    pointer-events: none;
 }
 .banner #dotsCanvas{
     position: absolute;

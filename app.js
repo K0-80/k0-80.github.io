@@ -5,7 +5,7 @@ canvas.height = canvas.offsetHeight;
 const ctx = canvas.getContext('2d');
 const dots = [];
 const arrayColors = ['#999999', '#777777', '#555555', '#333333', '#111111'];
-for (let index = 0; index < 200; index++) {
+for (let index = 0; index < 50; index++) {
     dots.push({
         x:  Math.floor(Math.random() * canvas.width),
         y:  Math.floor(Math.random() * canvas.height),
