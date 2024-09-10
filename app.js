@@ -69,7 +69,7 @@ window.addEventListener('resize', () => {
 const bobaTeaHeader = document.getElementById("boba-tea-header");
 
 bobaTeaHeader.addEventListener("click", () => {
-    window.location.href = "about.html";
+    window.location.href = "eabout.html";
 });
 
 bobaTeaHeader.addEventListener("mousedown", () => {
