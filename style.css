@@ -16,6 +16,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: center; 
+    list-style: none;
 }
 .top-row a {
     display: inline-block;
